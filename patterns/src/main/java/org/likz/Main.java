@@ -1,9 +1,19 @@
 package org.likz;
 
+import org.likz.singleton.AClass;
+import org.likz.singleton.LoggerSingleton;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        // Singleton
+        AClass aClass = new AClass();
+        LoggerSingleton logger = LoggerSingleton.getInstance();
+        logger.classLogg(aClass, "this is new A-class");
+
+        //Factory
+        
+
     }
 
 }
