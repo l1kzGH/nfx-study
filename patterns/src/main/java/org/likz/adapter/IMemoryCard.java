@@ -4,6 +4,6 @@ public interface IMemoryCard {
     void connect();
 
     // another logic
-    default void read() {};
-    default void write() {};
+    default void read() {}
+    default void write() {}
 }

@@ -24,7 +24,7 @@ public class LoggerSingleton {
     public void classLogg(Object obj, String info) {
         String today = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd.MM.yy"));
 
-        System.out.println(today + " - " + obj.getClass().getSimpleName() + " - " + info);
+        System.out.println("Log info: " + today + " - " + obj.getClass().getSimpleName() + " - " + info);
     }
 
 }
