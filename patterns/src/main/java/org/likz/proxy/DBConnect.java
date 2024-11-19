@@ -1,5 +1,5 @@
 package org.likz.proxy;
 
 public interface DBConnect {
-    void connect();
+    void connect(String databaseName);
 }

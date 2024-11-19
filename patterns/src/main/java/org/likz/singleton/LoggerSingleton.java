@@ -5,20 +5,15 @@ import java.time.format.DateTimeFormatter;
 
 public class LoggerSingleton {
 
-    private static volatile LoggerSingleton logger;
-
     private LoggerSingleton() {
     }
 
+    private static class HolderSingletom {
+        private static final LoggerSingleton INSTANCE = new LoggerSingleton();
+    }
+
     public static LoggerSingleton getInstance() {
-        if (logger == null) {
-            synchronized (LoggerSingleton.class) {
-                if (logger == null) {
-                    logger = new LoggerSingleton();
-                }
-            }
-        }
-        return logger;
+        return HolderSingletom.INSTANCE;
     }
 
     public void classLogg(Object obj, String info) {
